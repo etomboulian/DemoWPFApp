@@ -6,11 +6,11 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DemoWFPApp.Business;
-using DemoWFPApp.Common;
+using DemoWPFApp.Business;
+using DemoWPFApp.Common;
 
 
-namespace DemoWFPApp
+namespace DemoWPFApp
 {
 
     class InvoiceViewModel : INotifyPropertyChanged

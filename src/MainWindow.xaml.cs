@@ -12,10 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DemoWFPApp.Business;
-using DemoWFPApp.Common;
+using DemoWPFApp.Business;
+using DemoWPFApp.Common;
 
-namespace DemoWFPApp
+namespace DemoWPFApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

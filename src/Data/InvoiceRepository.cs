@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DemoWFPApp.Common;
+using DemoWPFApp.Common;
 
-namespace DemoWFPApp.Data
+namespace DemoWPFApp.Data
 {
     class InvoiceRepository
     {

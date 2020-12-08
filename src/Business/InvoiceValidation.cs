@@ -1,5 +1,5 @@
-﻿using DemoWFPApp.Common;
-using DemoWFPApp.Data;
+﻿using DemoWPFApp.Common;
+using DemoWPFApp.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace DemoWFPApp.Business
+namespace DemoWPFApp.Business
 {
     
     class InvoiceValidation
