@@ -64,6 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Business\InvoiceValidation.cs" />
     <Compile Include="Common\Invoice.cs" />
     <Compile Include="Common\InvoiceDetail.cs" />
     <Compile Include="Data\InvoiceRepository.cs" />

@@ -6,8 +6,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DemoWFPApp.Business;
 using DemoWFPApp.Common;
-using DemoWFPApp.Data;
+
 
 namespace DemoWFPApp
 {
@@ -55,7 +56,7 @@ namespace DemoWFPApp
         // sets the initial selectedInvoiceDetail
         public InvoiceViewModel()
         {
-            invoice = InvoiceRepository.GetInvoice();
+            invoice = InvoiceValidation.GetInvoice();
             Invoice = new BindingSource();
             Invoice.DataSource = invoice;
             SelectedInvoiceDetail = invoice[0];

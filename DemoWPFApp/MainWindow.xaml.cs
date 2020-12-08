@@ -12,8 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DemoWFPApp.Business;
 using DemoWFPApp.Common;
-using DemoWFPApp.Data;
 
 namespace DemoWFPApp
 {
@@ -40,10 +40,10 @@ namespace DemoWFPApp
 
         private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
-            if(validate())
+            if(InvoiceValidation.Validate(InvoiceVM.SelectedInvoiceDetail))
             {
                 int rowsAffected;
-                rowsAffected = InvoiceRepository.UpdateInvoice(InvoiceVM.SelectedInvoiceDetail, (Invoice)InvoiceVM.Invoice.DataSource);
+                rowsAffected = InvoiceValidation.UpdateInvoice(InvoiceVM.SelectedInvoiceDetail, (Invoice)InvoiceVM.Invoice.DataSource);
 
                 if(rowsAffected < 0)
                 {
@@ -57,7 +57,7 @@ namespace DemoWFPApp
             }
             else
             {
-                MessageBox.Show("Validation Failed, please try again", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(InvoiceValidation.GetErrorMessages(), "Validation Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -79,10 +79,6 @@ namespace DemoWFPApp
             listBoxInvoiceDetails.IsSynchronizedWithCurrentItem = true;
         }
 
-        private bool validate()
-        {
-
-            return true;
-        }
+   
     }
 }
